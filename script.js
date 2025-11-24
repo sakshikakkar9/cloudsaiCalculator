@@ -15,5 +15,5 @@ function calculate() {
     const resultBox = document.getElementById("resultBox");
     resultBox.style.display = "block";
     // resultBox.innerHTML = "Total Batch Cost: <br><strong>₹ " + result.toFixed(2) + "</strong>";
-    document.getElementById('result').innerText = `Cost per Student: ₹${costPerStudent.toFixed(2)} | Total Batch Cost: ₹${batchCost.toFixed(2)}`;
+    document.getElementById('resultBox').innerText = `Cost per Student: ₹${costPerStudent.toFixed(2)} | Total Batch Cost: ₹${batchCost.toFixed(2)}`;
 }
