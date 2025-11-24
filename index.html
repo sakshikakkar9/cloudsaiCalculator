@@ -8,33 +8,26 @@
 </head>
 
 <body>
-
 <div class="calculator">
-    <h2>Institute Cost Calculator</h2>
+<h2>Batch Cost Calculator</h2>
 
-    <div class="input-group">
-        <label>Total Cost Per Student Pay</label>
-        <input type="number" id="costPerStudent" placeholder="Enter amount...">
-    </div>
 
-    <div class="input-group">
-        <label>No. of Participants</label>
-        <input type="number" id="participants" placeholder="Enter participants...">
-    </div>
+<label>No. of Participants</label>
+<input type="number" id="participants" placeholder="Enter number" />
 
-    <div class="input-group">
-        <label>No. of Hours (Total Course Hours)</label>
-        <input type="number" id="hours" placeholder="Enter total hours...">
-    </div>
 
-    <div class="input-group">
-        <label>Cost Per Hour</label>
-        <input type="number" id="costPerHour" placeholder="Enter cost per hour...">
-    </div>
+<label>No. of Hours</label>
+<input type="number" id="hours" placeholder="Enter hours" />
 
-    <button onclick="calculate()">Calculate</button>
 
-    <div class="result" id="resultBox">Result will appear here</div>
+<label>Cost per Hour</label>
+<input type="number" id="costPerHour" placeholder="Enter cost per hour" />
+
+
+<button onclick="calculate()">Calculate Total Batch Cost</button>
+
+
+<div id="result">Result will appear here</div>
 </div>
 
 <script src="./script.js"></script>
