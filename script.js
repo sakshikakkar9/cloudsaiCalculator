@@ -1,19 +1,19 @@
 function calculate() {
-const participants = parseFloat(document.getElementById('participants').value);
-const hours = parseFloat(document.getElementById('hours').value);
-const costPerHour = parseFloat(document.getElementById('costPerHour').value);
+    const costPerStudent = parseFloat(document.getElementById("costPerStudent").value);
+    const participants = parseFloat(document.getElementById("participants").value);
+    const hours = parseFloat(document.getElementById("hours").value);
+    const costPerHour = parseFloat(document.getElementById("costPerHour").value);
 
+    if (isNaN(costPerStudent) || isNaN(participants) || isNaN(hours) || isNaN(costPerHour)) {
+        alert("Please fill all fields correctly!");
+        return;
+    }
 
-if (isNaN(participants) || isNaN(hours) || isNaN(costPerHour)) {
-document.getElementById('result').innerText = '⚠️ Please fill all fields correctly!';
-return;
-}
+    // NEW UPDATED FORMULA
+    const result = costPerStudent - (participants * hours );
 
-
-const totalCost = hours * costPerHour;
-const batchCost = totalCost - (participants * hours);
-const costPerStudent = batchCost / participants;
-
-
-document.getElementById('result').innerText = `Cost per Student: ₹${costPerStudent.toFixed(2)} | Total Batch Cost: ₹${batchCost.toFixed(2)}`;
+    const resultBox = document.getElementById("resultBox");
+    resultBox.style.display = "block";
+    // resultBox.innerHTML = "Total Batch Cost: <br><strong>₹ " + result.toFixed(2) + "</strong>";
+    document.getElementById('result').innerText = `Cost per Student: ₹${costPerStudent.toFixed(2)} | Total Batch Cost: ₹${batchCost.toFixed(2)}`;
 }
